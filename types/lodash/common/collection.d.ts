@@ -1005,6 +1005,18 @@ declare module "../index" {
          * @return True if the target element is found, else false.
          */
         includes<T>(collection: Dictionary<T> | NumericDictionary<T> | null | undefined, target: T, fromIndex?: number): boolean;
+        /**
+         * @see _.includes
+         */
+        includes<T>(collection: List<T> | null | undefined, target: T, fromIndex?: number): boolean;
+        /**
+         * @see _.includes
+         */
+        includes<T extends object>(collection: T | null | undefined, target: T, fromIndex?: number): boolean;
+        /**
+         * @see _.includes
+         */
+        includes(collection: string | null | undefined, target: string, fromIndex?: number): boolean;
     }
     interface Object<T> {
         /**
